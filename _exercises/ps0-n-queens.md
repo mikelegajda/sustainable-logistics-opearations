@@ -5,6 +5,31 @@ problem_set: 0
 order: 1
 description: "Classic constraint programming problem - place N queens on an NxN chessboard"
 download_url: "https://raw.githubusercontent.com/mikelegajda/sustainable_logistics/58f68b0b45d0fe772f391ce6009ccf68c12d4e07/DSL_PS__n_queens.py"
+sample_output: |
+  Solution 1:
+  Q _ _ _ _ _ _ _ 
+  _ _ _ _ Q _ _ _ 
+  _ _ _ _ _ _ _ Q 
+  _ _ _ _ _ Q _ _ 
+  _ _ Q _ _ _ _ _ 
+  _ _ _ _ _ _ Q _ 
+  _ Q _ _ _ _ _ _ 
+  _ _ _ Q _ _ _ _ 
+
+  Solution 2:
+  Q _ _ _ _ _ _ _ 
+  _ _ _ _ _ Q _ _ 
+  _ _ _ _ _ _ _ Q 
+  _ _ Q _ _ _ _ _ 
+  _ _ _ _ _ _ Q _ 
+  _ _ _ Q _ _ _ _ 
+  _ Q _ _ _ _ _ _ 
+  _ _ _ _ Q _ _ _ 
+
+  ...
+
+  Status: OPTIMAL
+  Solutions found: 92
 explanation: |
   The N-Queens problem is a classic constraint satisfaction problem that demonstrates the power of constraint programming.
   

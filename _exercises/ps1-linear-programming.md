@@ -5,6 +5,17 @@ problem_set: 1
 order: 2
 description: "Solving a simple linear optimization problem using OR-Tools linear solver"
 download_url: "https://raw.githubusercontent.com/mikelegajda/sustainable_logistics/58f68b0b45d0fe772f391ce6009ccf68c12d4e07/DSL_PS_1_lp.py"
+sample_output: |
+  Number of variables = 2
+  Number of constraints = 1
+  Solution:
+  Objective value = 4.0
+  x = 1.0
+  y = 1.0
+
+  Advanced usage:
+  Problem solved in 0.000000 milliseconds
+  Problem solved in 2 iterations
 explanation: |
   This exercise introduces Linear Programming (LP) using Google OR-Tools' GLOP solver.
   

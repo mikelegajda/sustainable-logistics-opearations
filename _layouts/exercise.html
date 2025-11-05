@@ -31,17 +31,31 @@ layout: default
         {% endif %}
 
         <section class="code-section">
-            <h2>Code</h2>
+            <h2>Code Implementation</h2>
             <div class="code-header">
                 <button class="copy-btn" onclick="copyCode('code-{{ page.title | slugify }}')">
                     <i class="fas fa-copy"></i> Copy Code
                 </button>
-                <a href="{{ page.download_url }}" download class="download-btn">
-                    <i class="fas fa-download"></i> Download
-                </a>
+                <button class="download-btn" onclick="downloadCode('code-{{ page.title | slugify }}', '{{ page.title | slugify }}.py')">
+                    <i class="fas fa-download"></i> Download .py
+                </button>
             </div>
-            <div class="code-container" id="code-{{ page.title | slugify }}">
-                {{ content }}
+            
+            <!-- Notebook-style cell -->
+            <div class="notebook-cell">
+                <div class="notebook-cell-header">
+                    <span class="cell-number">[ ]</span>
+                    <span>Python Code</span>
+                </div>
+                <div class="notebook-cell-code" id="code-{{ page.title | slugify }}">
+                    {{ content }}
+                </div>
+                {% if page.sample_output %}
+                <div class="notebook-cell-output">
+                    <div class="notebook-cell-output-header">Output:</div>
+                    <pre>{{ page.sample_output }}</pre>
+                </div>
+                {% endif %}
             </div>
         </section>
 

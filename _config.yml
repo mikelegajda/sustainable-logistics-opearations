@@ -8,6 +8,13 @@ repository: mikelegajda/sustainable-logistics-opearations
 # Build settings
 markdown: kramdown
 theme: minima
+sass:
+  quiet_deps: true
+  verbose: false
+  silence_deprecations:
+    - import
+    - global-builtin
+    - color-functions
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -23,7 +30,7 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     block:
-      line_numbers: true
+      line_numbers: false
 
 # Defaults
 defaults:
