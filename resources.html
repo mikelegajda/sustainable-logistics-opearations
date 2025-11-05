@@ -1,0 +1,145 @@
+---
+layout: default
+title: Student Resources
+---
+
+<div class="hero">
+    <h1>Student Resources</h1>
+    <p>Useful tools and references for learning sustainable logistics optimization</p>
+</div>
+
+<section class="resources-section">
+    <h2><i class="fas fa-tools"></i> Development Tools</h2>
+    <ul class="resource-list">
+        <li>
+            <a href="https://colab.research.google.com/" target="_blank">
+                <i class="fab fa-google"></i> Google Colab - Free cloud-based Python environment
+            </a>
+            <p>Run Python code in your browser without any setup. Perfect for testing optimization algorithms.</p>
+        </li>
+        <li>
+            <a href="https://www.python.org/" target="_blank">
+                <i class="fab fa-python"></i> Python Official Website
+            </a>
+            <p>Download and install Python on your local machine.</p>
+        </li>
+        <li>
+            <a href="https://code.visualstudio.com/" target="_blank">
+                <i class="fas fa-code"></i> Visual Studio Code
+            </a>
+            <p>Popular code editor with excellent Python support.</p>
+        </li>
+    </ul>
+</section>
+
+<section class="resources-section mt-2">
+    <h2><i class="fas fa-book"></i> Libraries & Frameworks</h2>
+    <ul class="resource-list">
+        <li>
+            <a href="https://developers.google.com/optimization" target="_blank">
+                <i class="fas fa-cogs"></i> Google OR-Tools
+            </a>
+            <p>The main optimization library used in course exercises. Provides tools for constraint programming, linear programming, and routing.</p>
+        </li>
+        <li>
+            <a href="https://numpy.org/" target="_blank">
+                <i class="fas fa-calculator"></i> NumPy
+            </a>
+            <p>Fundamental package for scientific computing with Python.</p>
+        </li>
+        <li>
+            <a href="https://matplotlib.org/" target="_blank">
+                <i class="fas fa-chart-bar"></i> Matplotlib
+            </a>
+            <p>Comprehensive library for creating visualizations in Python.</p>
+        </li>
+    </ul>
+</section>
+
+<section class="resources-section mt-2">
+    <h2><i class="fas fa-graduation-cap"></i> Learning Resources</h2>
+    <ul class="resource-list">
+        <li>
+            <a href="https://developers.google.com/optimization/introduction" target="_blank">
+                <i class="fas fa-book-open"></i> OR-Tools Documentation
+            </a>
+            <p>Official documentation and tutorials for Google OR-Tools.</p>
+        </li>
+        <li>
+            <a href="https://github.com/mikelegajda/sustainable_logistics" target="_blank">
+                <i class="fab fa-github"></i> Course Source Code Repository
+            </a>
+            <p>Access all exercise source files directly from GitHub.</p>
+        </li>
+        <li>
+            <a href="https://docs.python.org/3/tutorial/" target="_blank">
+                <i class="fab fa-python"></i> Python Tutorial
+            </a>
+            <p>Official Python tutorial for beginners.</p>
+        </li>
+    </ul>
+</section>
+
+<section class="resources-section mt-2">
+    <h2><i class="fas fa-question-circle"></i> Quick Reference Guides</h2>
+    
+    <h3>Installing OR-Tools</h3>
+    <div class="code-container">
+        <div class="code-header">
+            <button class="copy-btn" onclick="copyCode('install-code')">
+                <i class="fas fa-copy"></i> Copy
+            </button>
+        </div>
+        <pre id="install-code"><code>pip install ortools</code></pre>
+    </div>
+    
+    <h3 class="mt-2">Basic OR-Tools Example</h3>
+    <div class="code-container">
+        <div class="code-header">
+            <button class="copy-btn" onclick="copyCode('example-code')">
+                <i class="fas fa-copy"></i> Copy
+            </button>
+        </div>
+        <pre id="example-code"><code>from ortools.sat.python import cp_model
+
+# Create the model
+model = cp_model.CpModel()
+
+# Create variables
+x = model.NewIntVar(0, 10, 'x')
+y = model.NewIntVar(0, 10, 'y')
+
+# Add constraints
+model.Add(x + y <= 10)
+
+# Create solver and solve
+solver = cp_model.CpSolver()
+status = solver.Solve(model)
+
+if status == cp_model.OPTIMAL:
+    print(f'x = {solver.Value(x)}')
+    print(f'y = {solver.Value(y)}')</code></pre>
+    </div>
+    
+    <h3 class="mt-2">Running Code in Google Colab</h3>
+    <ol>
+        <li>Open <a href="https://colab.research.google.com/" target="_blank">Google Colab</a></li>
+        <li>Click "New Notebook" or open an existing notebook link</li>
+        <li>Paste your code into a code cell</li>
+        <li>Press Shift+Enter to run the cell</li>
+    </ol>
+</section>
+
+<section class="resources-section mt-2">
+    <h2><i class="fas fa-lightbulb"></i> Tips for Success</h2>
+    <div class="explanation">
+        <ul>
+            <li><strong>Start Simple:</strong> Begin with basic exercises before moving to complex problems</li>
+            <li><strong>Use Google Colab:</strong> Test code quickly without local installation</li>
+            <li><strong>Read the Explanations:</strong> Each exercise includes detailed explanations of the approach</li>
+            <li><strong>Experiment:</strong> Modify the code to test different scenarios and parameters</li>
+            <li><strong>Download Examples:</strong> Use the download button to save code for offline reference</li>
+            <li><strong>Practice Regularly:</strong> Work through exercises consistently to build understanding</li>
+        </ul>
+    </div>
+</section>

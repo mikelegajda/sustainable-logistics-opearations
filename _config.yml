@@ -1,0 +1,49 @@
+# Site settings
+title: Sustainable Logistics Operations
+description: Course materials and exercises for Sustainable Logistics Operations
+baseurl: "/sustainable-logistics-opearations"
+url: "https://mikelegajda.github.io"
+repository: mikelegajda/sustainable-logistics-opearations
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  exercises:
+    output: true
+    permalink: /exercises/:name/
+
+# Kramdown settings for syntax highlighting
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "exercises"
+    values:
+      layout: "exercise"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md

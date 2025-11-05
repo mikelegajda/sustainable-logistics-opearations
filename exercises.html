@@ -1,0 +1,98 @@
+---
+layout: default
+title: Exercises
+---
+
+<div class="hero">
+    <h1>Course Exercises</h1>
+    <p>Explore optimization problems and solutions for sustainable logistics</p>
+</div>
+
+<section class="resources-section">
+    <h2>Problem Sets</h2>
+    <p>Each exercise includes complete code examples, explanations, and optional Google Colab notebooks for interactive learning.</p>
+    
+    <h3 class="mt-2">Problem Set 1: Introduction to Optimization</h3>
+    <div class="exercises-grid">
+        {% assign ps1_exercises = site.exercises | where: "problem_set", 1 | sort: "order" %}
+        {% for exercise in ps1_exercises %}
+        <div class="exercise-card">
+            <h3>{{ exercise.title }}</h3>
+            <p>{{ exercise.description }}</p>
+            <a href="{{ exercise.url | relative_url }}">View Exercise <i class="fas fa-arrow-right"></i></a>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <h3 class="mt-2">Problem Set 2: Assignment Problems</h3>
+    <div class="exercises-grid">
+        {% assign ps2_exercises = site.exercises | where: "problem_set", 2 | sort: "order" %}
+        {% for exercise in ps2_exercises %}
+        <div class="exercise-card">
+            <h3>{{ exercise.title }}</h3>
+            <p>{{ exercise.description }}</p>
+            <a href="{{ exercise.url | relative_url }}">View Exercise <i class="fas fa-arrow-right"></i></a>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <h3 class="mt-2">Problem Set 3: Routing Problems (TSP)</h3>
+    <div class="exercises-grid">
+        {% assign ps3_exercises = site.exercises | where: "problem_set", 3 | sort: "order" %}
+        {% for exercise in ps3_exercises %}
+        <div class="exercise-card">
+            <h3>{{ exercise.title }}</h3>
+            <p>{{ exercise.description }}</p>
+            <a href="{{ exercise.url | relative_url }}">View Exercise <i class="fas fa-arrow-right"></i></a>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <h3 class="mt-2">Problem Set 4: Vehicle Routing Problems</h3>
+    <div class="exercises-grid">
+        {% assign ps4_exercises = site.exercises | where: "problem_set", 4 | sort: "order" %}
+        {% for exercise in ps4_exercises %}
+        <div class="exercise-card">
+            <h3>{{ exercise.title }}</h3>
+            <p>{{ exercise.description }}</p>
+            <a href="{{ exercise.url | relative_url }}">View Exercise <i class="fas fa-arrow-right"></i></a>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <h3 class="mt-2">Problem Set 5: Packing Problems</h3>
+    <div class="exercises-grid">
+        {% assign ps5_exercises = site.exercises | where: "problem_set", 5 | sort: "order" %}
+        {% for exercise in ps5_exercises %}
+        <div class="exercise-card">
+            <h3>{{ exercise.title }}</h3>
+            <p>{{ exercise.description }}</p>
+            <a href="{{ exercise.url | relative_url }}">View Exercise <i class="fas fa-arrow-right"></i></a>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <h3 class="mt-2">Problem Set 6: Facility Location</h3>
+    <div class="exercises-grid">
+        {% assign ps6_exercises = site.exercises | where: "problem_set", 6 | sort: "order" %}
+        {% for exercise in ps6_exercises %}
+        <div class="exercise-card">
+            <h3>{{ exercise.title }}</h3>
+            <p>{{ exercise.description }}</p>
+            <a href="{{ exercise.url | relative_url }}">View Exercise <i class="fas fa-arrow-right"></i></a>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <h3 class="mt-2">Additional Exercises</h3>
+    <div class="exercises-grid">
+        {% assign other_exercises = site.exercises | where: "problem_set", 0 | sort: "order" %}
+        {% for exercise in other_exercises %}
+        <div class="exercise-card">
+            <h3>{{ exercise.title }}</h3>
+            <p>{{ exercise.description }}</p>
+            <a href="{{ exercise.url | relative_url }}">View Exercise <i class="fas fa-arrow-right"></i></a>
+        </div>
+        {% endfor %}
+    </div>
+</section>

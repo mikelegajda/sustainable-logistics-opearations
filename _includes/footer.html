@@ -1,0 +1,28 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>{{ site.title }}</h3>
+                <p>{{ site.description }}</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{{ '/exercises/' | relative_url }}">Exercises</a></li>
+                    <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
+                    <li><a href="https://github.com/{{ site.repository }}" target="_blank">GitHub Repository</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Related</h3>
+                <ul>
+                    <li><a href="https://github.com/mikelegajda/sustainable_logistics" target="_blank">Source Code Repository</a></li>
+                    <li><a href="https://colab.research.google.com/" target="_blank">Google Colab</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
