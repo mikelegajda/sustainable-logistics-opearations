@@ -74,18 +74,18 @@ body {
 
 /* Main Content */
 main {
-    padding: 2rem 0;
+    padding: 3rem 0;
     min-height: calc(100vh - 200px);
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     color: white;
     padding: 4rem 2rem;
     text-align: center;
     border-radius: 10px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .hero h1 {
@@ -119,18 +119,39 @@ main {
     color: white;
 }
 
+/* Intro Section */
+.intro-section {
+    margin-bottom: 3rem;
+}
+
+.intro-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.intro-section h3 {
+    color: var(--primary-color);
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.intro-section p {
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
 /* Exercise Layout */
 .exercise {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 10px;
     box-shadow: var(--shadow);
 }
 
 .exercise-header {
     border-bottom: 3px solid var(--secondary-color);
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .exercise-header h1 {
@@ -150,10 +171,10 @@ main {
 
 /* Colab Section */
 .colab-section {
-    background: linear-gradient(135deg, #f4b400, #f39c12);
-    padding: 1.5rem;
+    background: #f39c12;
+    padding: 2rem;
     border-radius: 8px;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     text-align: center;
 }
 
@@ -180,9 +201,9 @@ main {
 /* Explanation Section */
 .explanation {
     background-color: #e8f4f8;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 8px;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     border-left: 4px solid var(--secondary-color);
 }
 
@@ -193,12 +214,12 @@ main {
 
 /* Code Section */
 .code-section {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .code-section h2 {
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .code-header {
@@ -270,10 +291,10 @@ main {
 /* Notes Section */
 .notes {
     background-color: #fff3cd;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 8px;
     border-left: 4px solid #ffc107;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .notes h2 {
@@ -314,13 +335,13 @@ main {
 .exercises-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
     margin-top: 2rem;
 }
 
 .exercise-card {
     background: white;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: var(--shadow);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -333,12 +354,13 @@ main {
 
 .exercise-card h3 {
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .exercise-card p {
     color: #666;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 .exercise-card a {
@@ -350,10 +372,10 @@ main {
 /* Resources Section */
 .resources-section {
     background: white;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 10px;
     box-shadow: var(--shadow);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .resources-section h2 {
@@ -368,7 +390,7 @@ main {
 }
 
 .resource-list li {
-    padding: 1rem;
+    padding: 1.25rem 1rem;
     border-bottom: 1px solid var(--border-color);
 }
 
