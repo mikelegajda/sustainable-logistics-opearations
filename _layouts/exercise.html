@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+<article class="exercise">
+    <header class="exercise-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.problem_set %}
+        <p class="problem-set">Problem Set {{ page.problem_set }}</p>
+        {% endif %}
+        {% if page.description %}
+        <p class="description">{{ page.description }}</p>
+        {% endif %}
+    </header>
+
+    <div class="exercise-content">
+        {% if page.colab_link %}
+        <div class="colab-section">
+            <h2><i class="fab fa-google"></i> Google Colab Notebook</h2>
+            <a href="{{ page.colab_link }}" target="_blank" class="colab-button">
+                <i class="fab fa-google"></i> Open in Colab
+            </a>
+        </div>
+        {% endif %}
+
+        {% if page.explanation %}
+        <section class="explanation">
+            <h2>Explanation</h2>
+            {{ page.explanation | markdownify }}
+        </section>
+        {% endif %}
+
+        <section class="code-section">
+            <h2>Code</h2>
+            <div class="code-header">
+                <button class="copy-btn" onclick="copyCode('code-{{ page.title | slugify }}')">
+                    <i class="fas fa-copy"></i> Copy Code
+                </button>
+                <a href="{{ page.download_url }}" download class="download-btn">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+            <div class="code-container" id="code-{{ page.title | slugify }}">
+                {{ content }}
+            </div>
+        </section>
+
+        {% if page.notes %}
+        <section class="notes">
+            <h2>Additional Notes</h2>
+            {{ page.notes | markdownify }}
+        </section>
+        {% endif %}
+    </div>
+
+    <nav class="exercise-nav">
+        {% if page.previous %}
+        <a href="{{ page.previous.url | relative_url }}" class="prev">
+            <i class="fas fa-arrow-left"></i> Previous: {{ page.previous.title }}
+        </a>
+        {% endif %}
+        {% if page.next %}
+        <a href="{{ page.next.url | relative_url }}" class="next">
+            Next: {{ page.next.title }} <i class="fas fa-arrow-right"></i>
+        </a>
+        {% endif %}
+    </nav>
+</article>
